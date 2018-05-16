@@ -1,48 +1,57 @@
 import React from 'react';
 import "./Navbar.css";
-import {
-  Navbar,
-  Nav,
-  NavItem,
-  UncontrolledDropdown,
-  NavDropdown,
-  MenuItem } from 'react-bootstrap';
+import { Menu, Icon,Dropdown,Segment} from 'semantic-ui-react';
+
+const dropdownChoices = [
+  { key: 1, text: 'Choice 1', value: 1 },
+  { key: 2, text: 'Choice 2', value: 2 },
+  { key: 3, text: 'Choice 3', value: 3 },
+];
 
 var NavComponent = () => 
 
-<Navbar inverse collapseOnSelect >
-  <Navbar.Header>
-    <Navbar.Brand>
-      <a href="#brand">TrashTalks</a>
-    </Navbar.Brand>
-    <Navbar.Toggle />
-  </Navbar.Header>
-  <Navbar.Collapse>
-    <Nav>
-      <NavItem eventKey={1} href="#">
-        Link
-      </NavItem>
-      <NavItem eventKey={2} href="#">
-        Link
-      </NavItem>
-      <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-        <MenuItem eventKey={3.1}>Action</MenuItem>
-        <MenuItem eventKey={3.2}>Another action</MenuItem>
-        <MenuItem eventKey={3.3}>Something else here</MenuItem>
-        <MenuItem divider />
-        <MenuItem eventKey={3.3}>Separated link</MenuItem>
-      </NavDropdown>
-    </Nav>
-    <Nav pullRight>
-      <NavItem eventKey={1} href="#">
-        Link Right
-      </NavItem>
-      <NavItem eventKey={2} href="#">
-        Link Right
-      </NavItem>
-    </Nav>
-  </Navbar.Collapse>
-</Navbar>
+
+<Segment inverted>
+  <Menu inverted pointing >
+
+    <Menu.Item>
+
+      <Icon.Group size='huge'> 
+        <Icon name='trash' />
+       
+      </Icon.Group>
+
+      <h2><a href="#brand">TrashTalks</a></h2>
+
+    </Menu.Item>
+
+
+    <Menu.Item href="#">
+      LeftLink1
+    </Menu.Item>
+
+    <Menu.Item href="#">
+      LeftLink2
+    </Menu.Item>
+
+    <Dropdown text = "TheDropDown" options = {dropdownChoices} simple item>
+    </Dropdown>
+
+
+    <Menu.Menu position = "right">
+
+      <Menu.Item href="#">
+        LinkRight1
+      </Menu.Item>
+
+      <Menu.Item href="#">
+        LinkRight2
+      </Menu.Item>
+
+    </Menu.Menu>
+
+  </Menu>
+</Segment>
 
 export default NavComponent;
       
