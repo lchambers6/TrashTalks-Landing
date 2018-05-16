@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "../../components/Navbar";
 import {Jumbotron, Image,Grid,Row,Col} from "react-bootstrap";
+import Founders from "../../components/Founders";
 
 class LandingPage extends Component {
 
@@ -22,10 +23,12 @@ class LandingPage extends Component {
 					   	Leaning towards not using react-bootstrap due to limited documentation, limited modals, no cards, icon library needs to be imported, still need to use mediaQueries
 					  </p>
 					  
-				</Jumbotron>;
+				</Jumbotron>
 				
-				<Grid>
-					<Row>
+				<Founders
+					titleHeading="Meet the Founders"
+					bsStyleColor = "success"
+				>
 						<Col xs={6} md={4}>
 							<Image src="https://media.licdn.com/dms/image/C4D03AQHQRSCSXG12oQ/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=1iPK7E-jkRxgejW1gj9y-rJ2I4601fZeqj-BikRW8tU" thumbnail />
 							<p> Testing the text for these images. Cant find good doc. </p>
@@ -36,8 +39,7 @@ class LandingPage extends Component {
 						<Col xs={6} md={4}>
 							<Image src="https://media.licdn.com/dms/image/C5103AQFhOgeXUwXDtA/profile-displayphoto-shrink_200_200/0?e=1531958400&v=beta&t=HNTcez0aADtQuYGLclEY5rk-v-e2dl2RCmdxv8fCRBU" thumbnail />
 						</Col>
-					</Row>
-				</Grid>;
+				</Founders>
 
 			</div>
 	    )

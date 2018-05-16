@@ -18,13 +18,13 @@ class App extends Component {
         <div className="App">
           <Navbar/>
           <Switch>
-            <Route exact path = "/" component = {Landing} />;
+            <Route exact path = "/" component = {Landing} />
           </Switch>
 
           <Footer />
         </div>
       </Router>
-    );
+    )
   }
 }
 

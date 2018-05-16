@@ -42,7 +42,7 @@ var NavComponent = () =>
       </NavItem>
     </Nav>
   </Navbar.Collapse>
-</Navbar>;
+</Navbar>
 
 export default NavComponent;
       
