@@ -22,9 +22,12 @@ class LandingPage extends Component {
 						    Maybe use popups.
 						    Or just circle images.
 						   	<br/><br/>
-						   	I don't like the Jumbotron 
+						   	The navbar is a "inverted black segment" 
 						   	<br/><br/>
-						   	Leaning towards not using react-bootstrap due to limited documentation, limited modals, no cards, icon library needs to be imported, still need to use mediaQueries
+						   	The 'TrashTalks-WeListen' section is a "Container with an inverted blue segment" inside of it
+						   	<br/><br/>
+						   	The 'Meet The founders' section is also a "container with an inverte purple segment" inside of it
+						   	<br/><br/> Containers stack with no margins. Segments expand the entire div they are in and come with top/bottom margins
 						  </p>
 					  </Segment>
 				</Segment.Group>
@@ -33,7 +36,7 @@ class LandingPage extends Component {
 				<Founders
 					titleHeading="Meet the Founders"
 				>
-						<Grid.Column>
+						<Grid.Column >
 							<PersonCard
 								imageLink="https://media.licdn.com/dms/image/C4D03AQHQRSCSXG12oQ/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=1iPK7E-jkRxgejW1gj9y-rJ2I4601fZeqj-BikRW8tU"
 								personName = "Luke Chamers"
