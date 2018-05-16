@@ -5,7 +5,6 @@ class Footer extends Component {
   render() {
     return (
       <div className="Footer">
-      <footer>
             <div className="container">
                 <div className="row">
                     <div className="copyright">
@@ -16,7 +15,6 @@ class Footer extends Component {
                     </div>
                 </div>
             </div>
-        </footer>
       </div>
     );
   }

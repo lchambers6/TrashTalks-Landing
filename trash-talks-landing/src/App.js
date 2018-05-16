@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
-import Footer from "./components/footer/Footer";
-import NavBar from "./components/navbar/NavBar";
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Landing from "./pages/Landing";
+import Page2 from "./pages/Page2";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 class App extends Component {
+
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
+  }
+
   render() {
     return (
-      <div className="App">
-      <NavBar />
-        <header className="App-header">
-          <h1 className="App-title">Trash Talks</h1>
-        </header>
-        <p className="App-intro">
-          Founders: Luke Chambers, Jackie Alexander, Arturo Salmeron
-        </p>
-        <Footer />
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar/>
+          <Switch>
+            <Route exact path = "/" component = {Landing} />;
+          </Switch>
+
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
