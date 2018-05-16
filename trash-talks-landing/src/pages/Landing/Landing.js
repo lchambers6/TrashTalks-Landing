@@ -12,10 +12,10 @@ class LandingPage extends Component {
 			<Container>
 				<Segment.Group>
 
-					<Segment inverted color="blue">
-				  		<h1>TrahsTalks - We Listen!</h1></Segment>
+					<Segment inverted color="teal">
+				  		<h1>TrashTalks - We Listen!</h1></Segment>
 					<Segment> 
-						  <p>
+						  <h3>
 						    This text can be filled in by Jackie or Luke. Going to type a few sentences
 						    just to fill in the space and  to get a feel for how the Jumbotron will look.
 						    Going to add founders' pics below.
@@ -25,7 +25,7 @@ class LandingPage extends Component {
 						   	I don't like the Jumbotron 
 						   	<br/><br/>
 						   	Leaning towards not using react-bootstrap due to limited documentation, limited modals, no cards, icon library needs to be imported, still need to use mediaQueries
-						  </p>
+						  </h3>
 					  </Segment>
 				</Segment.Group>
 			</Container>
