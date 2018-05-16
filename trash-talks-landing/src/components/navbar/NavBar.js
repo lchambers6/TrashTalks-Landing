@@ -1,40 +1,31 @@
-import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import React from 'react';
+import { Navbar } from 'react-bootstrap';
 
-export default class MenuExampleBasic extends Component {
-  state = {}
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
+export default class Example extends React.Component {
   render() {
-    const { activeItem } = this.state
-
     return (
-      <Menu>
-        <Menu.Item
-          name='founders'
-          active={activeItem === 'founders'}
-          onClick={this.handleItemClick}
-        >
-          Founders
-        </Menu.Item>
-
-        <Menu.Item
-          name='reviews'
-          active={activeItem === 'reviews'}
-          onClick={this.handleItemClick}
-        >
-          Reviews
-        </Menu.Item>
-
-        <Menu.Item
-          name='services'
-          active={activeItem === 'services'}
-          onClick={this.handleItemClick}
-        >
-          Services
-        </Menu.Item>
-      </Menu>
-    )
+      <Navbar>
+  <Navbar.Header>
+    <Navbar.Brand>
+      <a href="#home">React-Bootstrap</a>
+    </Navbar.Brand>
+  </Navbar.Header>
+  <Nav>
+    <NavItem eventKey={1} href="#">
+      Link
+    </NavItem>
+    <NavItem eventKey={2} href="#">
+      Link
+    </NavItem>
+    <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+      <MenuItem eventKey={3.1}>Action</MenuItem>
+      <MenuItem eventKey={3.2}>Another action</MenuItem>
+      <MenuItem eventKey={3.3}>Something else here</MenuItem>
+      <MenuItem divider />
+      <MenuItem eventKey={3.4}>Separated link</MenuItem>
+    </NavDropdown>
+  </Nav>
+</Navbar>
+    );
   }
 }
