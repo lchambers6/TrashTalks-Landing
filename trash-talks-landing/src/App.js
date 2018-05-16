@@ -12,7 +12,7 @@ class App extends Component {
         <p className="App-intro">
           Founders: Luke Chambers, Jackie Alexander, Arturo Salmeron
         </p>
-        <Footer />;
+        <Footer />
       </div>
     );
   }
