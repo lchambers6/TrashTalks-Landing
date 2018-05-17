@@ -5,7 +5,7 @@ import {Image, Icon, Card} from 'semantic-ui-react'
 
 var personCard = props =>
 
-	<Card>
+	<Card centered>
     <Image src={props.imageLink} />
 
     <Card.Content>

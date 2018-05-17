@@ -1,0 +1,19 @@
+.landingTitle {
+    text-align: left;
+}
+
+.landingWords {
+    text-align: left;
+}
+
+#about {
+    margin: 50px;
+}
+
+#founders {
+    margin: 50px;
+}
+
+p {
+    font-size: 16px;
+}
