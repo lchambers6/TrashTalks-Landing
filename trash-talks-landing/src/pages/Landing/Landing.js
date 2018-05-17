@@ -26,7 +26,7 @@ class LandingPage extends Component {
 				<Founders
 					titleHeading="Meet the Founders"
 				>
-						<Grid.Column>
+						<Grid.Column >
 							<PersonCard
 								imageLink="https://media.licdn.com/dms/image/C4D03AQHQRSCSXG12oQ/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=1iPK7E-jkRxgejW1gj9y-rJ2I4601fZeqj-BikRW8tU"
 								personName = "Luke Chamers"

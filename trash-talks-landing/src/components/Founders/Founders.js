@@ -14,9 +14,17 @@ var Founders = props =>
 				</Segment>
 
 				<Segment>
+
+				<Container>
+				<Grid centered divided columns = "equal">
+					 
+						{props.children}
+
 				<Grid centered columns = {3}> 
 					{props.children}
+
 				</Grid>
+				</Container>
 				</Segment>
 
 			</Segment.Group>
