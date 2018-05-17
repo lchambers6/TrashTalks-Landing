@@ -12,7 +12,7 @@ var NavComponent = () =>
 
 
 <Segment>
-  <Menu pointing>
+  <Menu pointing borderless>
 
     <Menu.Item>
 
@@ -21,24 +21,24 @@ var NavComponent = () =>
        
       </Icon.Group>
 
-      <h2><a href="#brand">TrashTalks</a></h2>
+      <h2>TrashTalks</h2>
 
     </Menu.Item>
 
 
-    <Menu.Item href="#">
-      LeftLink1
+    <Menu.Item href="#about">
+      <h3>About</h3>
     </Menu.Item>
 
-    <Menu.Item href="#">
-      LeftLink2
+    <Menu.Item href="#founders">
+    <h3>Founders</h3>
     </Menu.Item>
 
-    <Dropdown text = "TheDropDown" options = {dropdownChoices} simple item>
-    </Dropdown>
+    {/* <Dropdown text = "TheDropDown" options = {dropdownChoices} simple item>
+    </Dropdown> */}
 
 
-    <Menu.Menu position = "right">
+    <Menu.Menu position = "right" borderless>
 
       <Menu.Item href="https://www.instagram.com/trashtalks_welisten" target="_blank" rel="noopener noreferrer">
         <Icon disabled name='instagram' size='big' color='teal '/>
