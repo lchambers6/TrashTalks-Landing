@@ -22,9 +22,9 @@ class LandingPage extends Component {
 						people and businesses to create a world where trash is no longer viewed as a waste, 
 						but instead a resource. We believe that a circular economy is possible and we want 
 						to do our part in creating it. TrashTalks is honored to begin as part of the Georgia 
-						Tech CREATE-X accelerator, where we are excited to grow and blossom.
+						Tech CREATE-X accelerator where we are excited to grow and blossom.
 						<br/><br/>
-						Keep a look out in your local app store for the TrashTalks app which coming soon!
+						The TrashTalks mobile application is coming soon! Please email trashtalks2018@gmail.com to request more information.
 						</p>
 					</Segment>
 				</Segment.Group>

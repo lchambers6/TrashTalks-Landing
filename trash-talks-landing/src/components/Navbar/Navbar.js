@@ -40,11 +40,11 @@ var NavComponent = () =>
 
     <Menu.Menu position = "right" borderless>
 
-      <Menu.Item href="https://www.instagram.com/trashtalks_welisten" target="_blank" rel="noopener noreferrer">
+      <Menu.Item href="https://www.instagram.com/trashtalksolutions" target="_blank" rel="noopener noreferrer">
         <Icon disabled name='instagram' size='big' color='teal '/>
       </Menu.Item>
 
-      <Menu.Item href="https://twitter.com/trashtalksnow" target="_blank" rel="noopener noreferrer">
+      <Menu.Item href="https://twitter.com/trashtalksol" target="_blank" rel="noopener noreferrer">
         <Icon disabled name='twitter' size='big' color='teal'/>
       </Menu.Item>
 

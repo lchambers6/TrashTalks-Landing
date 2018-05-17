@@ -5,8 +5,6 @@ import {Grid,Container,Segment} from 'semantic-ui-react'
 
 var Founders = props =>
 
-	
-		<Container >
 
 			<Segment.Group >
 
@@ -25,6 +23,5 @@ var Founders = props =>
 
 			</Segment.Group>
 
-		</Container>
 
 export default Founders;
