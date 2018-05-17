@@ -34,7 +34,7 @@ class LandingPage extends Component {
 				<Founders
 					titleHeading="Meet the Founders"
 				>
-						<Grid.Column >
+						<Grid.Column mobile={16} tablet={8} computer={8} largeScreen={5} widescreen={5}>
 							<PersonCard
 								imageLink="https://media.licdn.com/dms/image/C4D03AQHQRSCSXG12oQ/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=1iPK7E-jkRxgejW1gj9y-rJ2I4601fZeqj-BikRW8tU"
 								personName = "Luke Chamers"
@@ -44,7 +44,7 @@ class LandingPage extends Component {
 								funFact = "Luke has been interested in trash since he was 10 years old."
 							/>
 						</Grid.Column>
-						<Grid.Column>
+						<Grid.Column mobile={16} tablet={8} computer={8} largeScreen={5} widescreen={5}>
 							<PersonCard
 								imageLink="https://media.licdn.com/dms/image/C5603AQGl34s5xlSYzw/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=r8lq55ictMWCz6Jc_QWBRkEDTe-RqBNmX9c9YolLLAo"
 								personName = "Jacqueline Alexander"
@@ -54,7 +54,7 @@ class LandingPage extends Component {
 								funFact = "Jackie has a goal to live to 250 years old."
 							/>
 						</Grid.Column>
-						<Grid.Column>
+						<Grid.Column mobile={16} tablet={8} computer={8} largeScreen={5} widescreen={5}>
 						
 							<PersonCard
 								imageLink="https://media.licdn.com/dms/image/C5103AQFhOgeXUwXDtA/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=CUpzB0uAbNmCK2SC94kZKPIx1CDRqbGq82VFLzLuxnY"

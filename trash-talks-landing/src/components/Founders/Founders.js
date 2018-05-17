@@ -17,7 +17,7 @@ var Founders = props =>
 				<Segment>
 
 				<Container>
-				<Grid centered divided columns = "equal">
+				<Grid centered columns = "equal" stackable>
 					{props.children}
 				</Grid>
 				</Container>
