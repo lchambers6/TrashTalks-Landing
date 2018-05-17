@@ -11,22 +11,15 @@ class LandingPage extends Component {
 			<div>
 			<Container>
 				<Segment.Group>
-
 					<Segment inverted color="teal">
 				  		<h1>TrashTalks - We Listen!</h1></Segment>
 					<Segment> 
-						  <h3>
-						    This text can be filled in by Jackie or Luke. Going to type a few sentences
-						    just to fill in the space and  to get a feel for how the Jumbotron will look.
-						    Going to add founders' pics below.
-						    Maybe use popups.
-						    Or just circle images.
-						   	<br/><br/>
-						   	I don't like the Jumbotron 
-						   	<br/><br/>
-						   	Leaning towards not using react-bootstrap due to limited documentation, limited modals, no cards, icon library needs to be imported, still need to use mediaQueries
-						  </h3>
-					  </Segment>
+						<h3>
+							TrashTalks has a mission to change the way that people think about their waste. We hope to help educate people and businesses to create a world where trash is no longer viewed as a waste.
+							<br/>
+							One way we hope to achieve this is through the TrashTalks app which will be in app stores soon!
+						</h3>
+					</Segment>
 				</Segment.Group>
 			</Container>
 				
