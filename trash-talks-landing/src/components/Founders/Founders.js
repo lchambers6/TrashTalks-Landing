@@ -10,14 +10,19 @@ var Founders = props =>
 
 			<Segment.Group >
 
-				<Segment inverted color="purple"> <h2 class="foundersSegment">{props.titleHeading}</h2>
+				<Segment inverted color="teal"> <h2 class="foundersSegment">{props.titleHeading}</h2>
 				</Segment>
 
 				<Segment>
+
 				<Container>
 				<Grid centered divided columns = "equal">
 					 
 						{props.children}
+
+				<Grid centered columns = {3}> 
+					{props.children}
+
 				</Grid>
 				</Container>
 				</Segment>

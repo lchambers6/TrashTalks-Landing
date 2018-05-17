@@ -11,13 +11,13 @@ const dropdownChoices = [
 var NavComponent = () => 
 
 
-<Segment inverted>
-  <Menu inverted pointing >
+<Segment>
+  <Menu pointing>
 
     <Menu.Item>
 
       <Icon.Group size='huge'> 
-        <Icon name='trash' />
+        <Icon name='trash' color="teal"/>
        
       </Icon.Group>
 
@@ -40,12 +40,12 @@ var NavComponent = () =>
 
     <Menu.Menu position = "right">
 
-      <Menu.Item href="#">
-        LinkRight1
+      <Menu.Item href="https://www.instagram.com/trashtalks_welisten" target="_blank" rel="noopener noreferrer">
+        <Icon disabled name='instagram' size='big' color='teal '/>
       </Menu.Item>
 
-      <Menu.Item href="#">
-        LinkRight2
+      <Menu.Item href="https://twitter.com/trashtalksnow" target="_blank" rel="noopener noreferrer">
+        <Icon disabled name='twitter' size='big' color='teal'/>
       </Menu.Item>
 
     </Menu.Menu>
