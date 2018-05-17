@@ -19,10 +19,6 @@ var Founders = props =>
 				<Grid centered divided columns = "equal">
 						{props.children}
 				</Grid>
-				<Grid centered columns = {3}> 
-					{props.children}
-
-				</Grid>
 				</Container>
 				</Segment>
 
