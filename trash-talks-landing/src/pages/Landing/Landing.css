@@ -17,3 +17,11 @@
 p {
     font-size: 16px;
 }
+/*
+.visible.transition {
+  margin-top: auto !important;
+  margin-left: auto !important;
+  display: inline-block !important;
+  position: relative;
+  top: 20%;
+}*/

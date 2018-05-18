@@ -1,10 +1,59 @@
 import React, { Component } from "react";
 import Navbar from "../../components/Navbar";
-import {Segment, Image,Grid,Container} from "semantic-ui-react";
+import {Segment, Image,Grid,Container,Modal,Header,Button} from "semantic-ui-react";
 import Founders from "../../components/Founders";
 import PersonCard from "../../components/PersonCard";
 import "./Landing.css"
 class LandingPage extends Component {
+
+	state = { 
+		modalOpen: false,
+		modalName: "",
+		modalImage: "",
+		modalBio:"",
+		FounderInfo:[
+
+	  		{imageLink:"https://media.licdn.com/dms/image/C4D03AQHQRSCSXG12oQ/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=1iPK7E-jkRxgejW1gj9y-rJ2I4601fZeqj-BikRW8tU"
+			,personName : "Luke Chambers"
+			,personTitle:"Founder"
+			,personDescription:"Luke was trained as an Environmental Engineer at Georgia Tech and has worked in the waste industry for 4 years and as a programmer for two."
+			,iconTypeName : "comment"
+			,funFact : "Luke has been interested in trash since he was 10 years old."
+			,fullBio: "Luke was trained as an Environmental Engineer at Georgia Tech and has worked in the waste industry for 4 years and as a programmer for two. He loves to listen to podcasts, to go rock climbing, playing with his dogs, and eating chocolate. Once prompt about trash, he'll talk your ear off. He truly is our #1 TrashTalker!"
+			},
+
+			{imageLink:"https://media.licdn.com/dms/image/C5603AQGl34s5xlSYzw/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=r8lq55ictMWCz6Jc_QWBRkEDTe-RqBNmX9c9YolLLAo"
+			,personName : "Jacqueline Alexander"
+			,personTitle:"Founder - CEO"
+			,personDescription:"Jackie is a current Economics student at Georgia Tech and has been running her own personal training business for 3 years."
+			,iconTypeName : "comment"
+			,funFact : "Jackie has a goal to live to 250 years old."
+			,fullBio: "Jackie is a current Economics student at Georgia Tech and has been running her own personal training business for 3 years. She is very mindful, likes to take naps, constantly thinks of new business ideas, and also loves chocolate. Currently, Jackie is practicing calligraphy and would like to have her own calligraphy business."
+			},
+
+			{imageLink:"https://media.licdn.com/dms/image/C5103AQFhOgeXUwXDtA/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=CUpzB0uAbNmCK2SC94kZKPIx1CDRqbGq82VFLzLuxnY"
+			,personName : "Arturo Salmeron"
+			,personTitle:"Founder"
+			,personDescription:"Arturo has a Materials Science degree from Georgia Tech and skills in software development."
+			,iconTypeName : "comment"
+			,funFact : "Arturo loves to cook, rock climb, and sing in the car."
+			,fullBio: "Arturo has a Materials Science & Engineering degree from Georgia Tech and skills in software development. Arturo loves to cook, enjoys rock climbing (bouldering), and really enjoys singing in the car; high notes are not off limits."
+			}
+		]
+  	};
+
+
+	handleOpen = (personClicked,e) => {
+		console.log(personClicked);
+		this.setState({modalOpen: true });
+		this.setState({modalImage:personClicked.imageLink});
+		this.setState({modalName:personClicked.personName});
+		this.setState({modalBio:personClicked.fullBio});
+		
+	};
+
+	handleClose = () => this.setState({ modalOpen: false })
+
 
 
 	render() {
@@ -34,39 +83,48 @@ class LandingPage extends Component {
 				<Founders
 					titleHeading="Meet the Founders"
 				>
-						<Grid.Column mobile={16} tablet={8} computer={8} largeScreen={5} widescreen={5}>
-							<PersonCard
-								imageLink="https://media.licdn.com/dms/image/C4D03AQHQRSCSXG12oQ/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=1iPK7E-jkRxgejW1gj9y-rJ2I4601fZeqj-BikRW8tU"
-								personName = "Luke Chamers"
-								personTitle="Founder"
-								personDescription="Luke was trained as an Environmental Engineer at Georgia Tech and has worked in the waste industry for 4 years and as a programmer for two."
-								iconTypeName = "comment"
-								funFact = "Luke has been interested in trash since he was 10 years old."
-							/>
-						</Grid.Column>
-						<Grid.Column mobile={16} tablet={8} computer={8} largeScreen={5} widescreen={5}>
-							<PersonCard
-								imageLink="https://media.licdn.com/dms/image/C5603AQGl34s5xlSYzw/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=r8lq55ictMWCz6Jc_QWBRkEDTe-RqBNmX9c9YolLLAo"
-								personName = "Jacqueline Alexander"
-								personTitle="Founder - CEO"
-								personDescription="Jackie is a current Economics student at Georgia Tech and has been running her own personal training business for 3 years."
-								iconTypeName = "comment"
-								funFact = "Jackie has a goal to live to 250 years old."
-							/>
-						</Grid.Column>
-						<Grid.Column mobile={16} tablet={8} computer={8} largeScreen={5} widescreen={5}>
-						
-							<PersonCard
-								imageLink="https://media.licdn.com/dms/image/C5103AQFhOgeXUwXDtA/profile-displayphoto-shrink_800_800/0?e=1531958400&v=beta&t=CUpzB0uAbNmCK2SC94kZKPIx1CDRqbGq82VFLzLuxnY"
-								personName = "Arturo Salmeron"
-								personTitle="Founder"
-								personDescription="Arturo has a Materials Science degree from Georgia Tech and skills in software development."
-								iconTypeName = "comment"
-								funFact = "Arturo loves to cook, rock climb, and sing in the car."
-							/>
-						</Grid.Column>
+
+					{this.state.FounderInfo.map(eachFounder => {
+						let boundItemClick = this.handleOpen.bind(this, eachFounder);
+						return (
+							<Grid.Column mobile={16} tablet={8} computer={8} largeScreen={5} widescreen={5}>
+
+								<PersonCard
+									key ={eachFounder.id}
+									imageLink={eachFounder.imageLink}
+									personName = {eachFounder.personName}
+									personTitle= {eachFounder.personTitle}
+									personDescription={eachFounder.personDescription}
+									funFact = {eachFounder.funFact}
+									iconTypeName = "comment"
+									showModalBio = {boundItemClick}
+								/>
+							</Grid.Column>
+							
+						)
+					})}
+
+				<Modal scrolling
+					open={this.state.modalOpen}
+					onClose={this.handleClose}
+				>
+	          
+		          <Modal.Content image>
+		            <Image wrapped rounded src={this.state.modalImage} />
+
+		            <Modal.Description>
+		              <Header>{this.state.modalName}</Header>
+		              <p>{this.state.modalBio}</p>
+
+		            </Modal.Description>
+
+		          </Modal.Content>
+				
+				</Modal>
+
 						
 				</Founders>
+
 			</Container>
 
 			</div>

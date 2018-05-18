@@ -1,11 +1,10 @@
 import React, {Component} from 'react'
 import "./PersonCard.css"
-import {Image, Icon, Card} from 'semantic-ui-react'
+import {Image, Icon, Card,Grid} from 'semantic-ui-react'
 
 
 var personCard = props =>
-
-	<Card centered className="personCard">
+	<Card centered className="personCard" onClick={props.showModalBio}>
     <Image src={props.imageLink} />
 
     <Card.Content>

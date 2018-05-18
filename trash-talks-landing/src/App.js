@@ -8,6 +8,11 @@ import Footer from "./components/Footer/Footer";
 
 class App extends Component {
 
+  state={
+    visible:true,
+    direction:"top"
+  }
+  toggleMenu = () =>this.setState({ visible: !this.state.visible })
   goTo(route) {
     this.props.history.replace(`/${route}`)
   }
@@ -16,7 +21,11 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Navbar/>
+          <Navbar
+            toggleMenu = {this.toggleMenu}
+            menuFrom={this.state.direction}
+            visible={this.state.visible}
+          />
           <Switch>
             <Route exact path = "/" component = {Landing} />
           </Switch>
