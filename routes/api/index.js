@@ -1,14 +1,12 @@
 // This js file is exporting the certain api files we want from within the api foler.
 
 
-//Below, we are requiring three files (addUser.js,auth-routes.js, and addBills.js)
+//Below, we are requiring 1 file (route1.js)
 // const router = require("express").Router();
-// const userRoutes = require("./addUser");
-// const authRoutes = require("./auth-routes");
-// const billRoutes = require("./addBills");
+// const YourRoute1File = require("./route1");
 
-// // User routes
-// router.use("/user", userRoutes);
-// router.use("/auth",authRoutes);
-// router.use("/bill",billRoutes);
+
+// // Tell the route what parameter to use, and which routes file
+// router.use("/user", YourRoute1File);
+
 // module.exports = router;
