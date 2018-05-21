@@ -9,9 +9,11 @@ import Footer from "./components/Footer/Footer";
 class App extends Component {
 
   state={
-    visible:true,
-    direction:"top"
+    visible:false,
   }
+  handlePusher = () =>{ 
+    const visible = this.state;
+    if (visible) this.setState({ visible: false });}
   toggleMenu = () =>this.setState({ visible: !this.state.visible })
   goTo(route) {
     this.props.history.replace(`/${route}`)
@@ -23,7 +25,7 @@ class App extends Component {
         <div className="App">
           <Navbar
             toggleMenu = {this.toggleMenu}
-            menuFrom={this.state.direction}
+            handlePusher = {this.handlePusher}
             visible={this.state.visible}
           />
           <Switch>
