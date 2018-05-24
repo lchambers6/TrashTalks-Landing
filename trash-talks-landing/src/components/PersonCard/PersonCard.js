@@ -3,8 +3,9 @@ import "./PersonCard.css"
 import {Image, Icon, Card,Grid} from 'semantic-ui-react'
 
 
-var personCard = props =>
-	<Card centered className="personCard" onClick={props.showModalBio}>
+var PersonCard = props => 
+
+  <Card centered className="personCard" onClick={props.showModalBio}>
     <Image src={props.imageLink} />
 
     <Card.Content>
@@ -22,4 +23,5 @@ var personCard = props =>
 
   </Card>
 
-export default personCard;
+
+export default PersonCard;
